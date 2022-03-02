@@ -1,3 +1,5 @@
+package tareas.uno.al.veinte;
+
 import java.util.Scanner;
 
 public class CalculadoraSinMultiplicar

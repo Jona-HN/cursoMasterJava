@@ -1,3 +1,5 @@
+package tareas.uno.al.veinte;
+
 import javax.swing.*;
 
 public class MatrizX

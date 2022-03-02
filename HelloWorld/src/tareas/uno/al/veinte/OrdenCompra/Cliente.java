@@ -1,4 +1,4 @@
-package OrdenCompra;
+package tareas.uno.al.veinte.OrdenCompra;
 
 public class Cliente
 {

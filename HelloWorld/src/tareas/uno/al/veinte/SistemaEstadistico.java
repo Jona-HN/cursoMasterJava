@@ -1,3 +1,5 @@
+package tareas.uno.al.veinte;
+
 import java.util.List;
 import java.util.Scanner;
 

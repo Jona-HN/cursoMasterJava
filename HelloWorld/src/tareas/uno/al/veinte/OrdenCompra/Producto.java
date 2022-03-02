@@ -1,4 +1,4 @@
-package OrdenCompra;
+package tareas.uno.al.veinte.OrdenCompra;
 
 // Le cambié un poquito al requerimiento de la tarea original
 // para practicar los enums

@@ -1,4 +1,4 @@
-// Restricción: no usar loops
+package tareas.uno.al.veinte;// Restricción: no usar loops
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-// Para tarea 6
+package tareas.uno.al.veinte;// Para tarea 6
 
 public class Persona
 {

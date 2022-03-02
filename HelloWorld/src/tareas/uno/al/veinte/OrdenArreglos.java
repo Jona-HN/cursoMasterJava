@@ -1,3 +1,5 @@
+package tareas.uno.al.veinte;
+
 public class OrdenArreglos
 {
 	public static void main(String[] args)
