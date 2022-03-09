@@ -48,7 +48,41 @@ public class Main
 	}
 
 	// ¿Cuál es la diferencia entre las siguientes dos firmas del método?:
+//	1. private static void imprimirDetalle(BolsaSupermercado<? extends Producto> bolsa)
+//	2. private static <T extends Producto> void imprimirDetalle(BolsaSupermercado<T> bolsa)
+
+	// Aquí no se define un tipo T, en cambio, se utiliza un wildcard
+	// en el tipo de dato del parámetro para que acepte objetos de tipo
+	// Producto. Por lo tanto, dentro del método no puede usarse el tipo T
+	// porque no está definido.
 //	private static void imprimirDetalle(BolsaSupermercado<? extends Producto> bolsa)
+
+	/* ************** Inicio del paréntesis ************** */
+	// Esta firma es equivalente a la siguiente; sin embargo, al igual que
+	// en la anterior, no se especifica un tipo T.
+	// private static void imprimirDetalle(BolsaSupermercado<Producto> bolsa)
+	/* ************** Fin del paréntesis ************** */
+
+	// Aquí sí se define un tipo T que, a su vez, limita el uso del método a objetos
+	// de tipo Producto (incluidos sus subtipos) gracias a la herencia. Por lo tanto,
+	// dentro del método sí se puede usar el tipo T como tipo de dato (genérico).
+	// Nota: si la clase estuviera parametrizada (es decir, el tipo T estuviera
+	// declarado en la cabecera de la clase), no sería necesario declararlo
+	// en la firma del método.
+	// En otras palabras:
+	// public class Main<T extends Producto>
+	// {
+	//     ...
+    //     private static void imprimirDetalle(BolsaSupermercado<T> bolsa) { ... }
+	// }
+
+	// Personalmente, prefiero esta firma por dos razones:
+	// 1. El tipo de dato que se maneja en la implementación del método es T, es decir, genérico.
+	// 2. Permite limitar el tipo de objetos que el método admite simplemente
+	//    cambiando o agregando más tipos a la lista de los que hereda T.
+	// Cabe destacar que es importante definir el tipo de dato que hereda T;
+	// de otra forma, para acceder a los métodos de un tipo de dato en concreto
+	// se necesitaría verificar que el objeto sea instancia de esa clase.
 	private static <T extends Producto> void imprimirDetalle(BolsaSupermercado<T> bolsa)
 	{
 		for (T producto : bolsa.getProductos())
